@@ -37,6 +37,42 @@ Import the `bucket.json` file into your Cosmic JS Bucket.  To do this go to Your
 
 <img src="https://cosmic-s3.imgix.net/44f0d590-0303-11e9-b4bb-b3fa3d766bf7-sendgrid.gif?w=1300" width="700" />
 
+## Running with Docker
+
+```shell
+git clone https://github.com/cosmicjs/vue-website-boilerplate
+cd vue-website-boilerplate
+
+# Run build and serve at localhost
+docker-compose up
+```
+
+### Without the source
+
+To run in the following architectures:
+
+- 386
+- amd64
+- arm/v6
+- arm/v7
+- arm64/v8
+- ppc64le
+- s390x
+
+Just:
+
+```shell
+# Serve at localhost
+docker run --publish 80:3000 fazenda/vue-website-boilerplate
+```
+
+To build your own version, take a look at the [Makefile](./Makefile). Just a friendly reminder to export the following variables before running the `make` command:
+
+```shell
+export DOCKER_USER="yourUserOrCompanyInTheDockerRegistry"
+export PROJECT_TAG="theVersionToMarkThisBuild"
+```
+
 ## Contact form setup
 Install and deploy the SendGrid Email Function.
 

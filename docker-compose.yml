@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  vue-website-boilerplate:
+    build:
+      context: .
+      target: INSTALLER
+    command:
+      - npm run build
+      - npm start
+    ports:
+      - 80:3000
